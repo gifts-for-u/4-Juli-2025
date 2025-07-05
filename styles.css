@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+.container {
+  padding: 15px;
+  max-width: 90%;
+  position: relative;
+  z-index: 10;
+}
+.btn-container {
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+.heart {
+  width: 80px;
+  height: 80px;
+  background: red;
+  position: relative;
+  transform: rotate(-45deg);
+  animation: pulse 1.5s ease infinite;
+  margin: 0 auto 60px auto;
+}
+.heart:before,
+.heart:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+.heart:before {
+  top: -40px;
+  left: 0;
+}
+.heart:after {
+  left: 40px;
+  top: 0;
+}
+/* Hati kecil yang tersebar */
+.small-heart {
+  width: 20px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  transform: rotate(-45deg);
+  animation: float 3s ease-in-out infinite;
+}
+.small-heart:before,
+.small-heart:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+}
+.small-heart:before {
+  top: -10px;
+  left: 0;
+}
+.small-heart:after {
+  left: 10px;
+  top: 0;
+}
+/* Posisi hati sesuai lingkaran biru */
+.heart1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+.heart2 {
+  top: 15%;
+  right: 37%;
+  animation-delay: 0.5s;
+}
+.heart3 {
+  top: 20%;
+  right: 8%;
+  animation-delay: 1s;
+}
+.heart4 {
+  top: 35%;
+  left: 5%;
+  animation-delay: 1.5s;
+}
+.heart5 {
+  top: 75%;
+  right: 12%;
+  animation-delay: 2s;
+}
+.heart6 {
+  bottom: 20%;
+  left: 10%;
+  animation-delay: 2.5s;
+}
+.heart7 {
+  bottom: 15%;
+  right: 45%;
+  animation-delay: 3s;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-45deg);
+  }
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+button {
+  padding: 8px 15px;
+  font-size: 0.9em;
+  background: #fff;
+  color: #ff6b6b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #ffebee;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+  .heart {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 40px;
+  }
+  .heart:before,
+  .heart:after {
+    width: 60px;
+    height: 60px;
+  }
+  .heart:before {
+    top: -30px;
+  }
+  .heart:after {
+    left: 30px;
+  }
+  .small-heart {
+    width: 15px;
+    height: 15px;
+  }
+  .small-heart:before,
+  .small-heart:after {
+    width: 15px;
+    height: 15px;
+  }
+  .small-heart:before {
+    top: -7px;
+  }
+  .small-heart:after {
+    left: 7px;
+  }
+  button {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+}
